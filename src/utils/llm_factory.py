@@ -124,7 +124,7 @@ def get_embeddings(provider: str = None):
 
     elif provider == "anthropic":
         # Anthropic không cung cấp Embeddings API → dùng OpenAI thay thế
-        print("⚠️  Anthropic không có Embeddings API — đang dùng OpenAI embeddings thay thế.")
+        print("Anthropic không có Embeddings API — đang dùng OpenAI embeddings thay thế.")
         from langchain_openai import OpenAIEmbeddings
         return OpenAIEmbeddings(
             model=config.OPENAI_EMBEDDING_MODEL,

@@ -30,14 +30,14 @@ def run_step(step_num: int):
     try:
         module = importlib.import_module(module_name)
         module.main()
-        print(f"\n✅ {title} — HOÀN THÀNH")
+        print(f"\n{title} — HOÀN THÀNH")
         return True
     except SystemExit as e:
         if e.code != 0:
-            print(f"\n❌ {title} — DỪNG (config thiếu hoặc lỗi)")
+            print(f"\n{title} — DỪNG (config thiếu hoặc lỗi)")
         return e.code == 0
     except Exception as e:
-        print(f"\n❌ {title} — LỖI: {e}")
+        print(f"\n{title} — LỖI: {e}")
         return False
 
 
@@ -58,7 +58,7 @@ def main():
         success = run_step(step_num)
         results[step_num] = success
         if not success and not args.step:
-            print(f"\n⛔ Dừng lại do Bước {step_num} thất bại.")
+            print(f"\nDừng lại do Bước {step_num} thất bại.")
             break
 
     # Tổng kết
@@ -67,7 +67,7 @@ def main():
     print(f"{'=' * 60}")
     for step_num, success in results.items():
         title = STEPS[step_num][0]
-        status = "✅ PASS" if success else "❌ FAIL"
+        status = "PASS" if success else "FAIL"
         print(f"  {status}  {title}")
 
 

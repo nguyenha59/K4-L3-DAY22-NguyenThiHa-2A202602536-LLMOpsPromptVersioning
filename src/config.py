@@ -1,7 +1,7 @@
 """
 Tải cấu hình từ file .env và thiết lập biến môi trường LangSmith.
 
-⚠️  Import module này TRƯỚC KHI import bất kỳ thư viện LangChain nào.
+Import module này TRƯỚC KHI import bất kỳ thư viện LangChain nào.
     config.py tự động set LANGCHAIN_* vào os.environ khi được import.
 """
 import os
@@ -73,13 +73,13 @@ def validate() -> bool:
     # Ollama: không cần API key
 
     if missing:
-        print("⚠️  Thiếu biến môi trường:")
+        print("Thiếu biến môi trường:")
         for m in missing:
             print(f"   - {m}")
         print("   Hãy kiểm tra file .env của bạn (xem .env.example để biết thêm).")
         return False
 
-    print(f"✅ Config OK  |  Provider: {PROVIDER.upper()}  |  Project: {LANGSMITH_PROJECT}")
+    print(f"Config OK  |  Provider: {PROVIDER.upper()}  |  Project: {LANGSMITH_PROJECT}")
     return True
 
 

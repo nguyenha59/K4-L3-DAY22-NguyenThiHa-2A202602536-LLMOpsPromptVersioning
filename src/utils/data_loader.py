@@ -63,7 +63,7 @@ def build_vectorstore(chunks: list, embeddings):
     """
     from langchain_community.vectorstores import FAISS
 
-    print(f"🔨 Đang tạo FAISS index từ {len(chunks)} chunks ...")
+    print(f"Đang tạo FAISS index từ {len(chunks)} chunks ...")
     vectorstore = FAISS.from_texts(chunks, embeddings)
-    print("✅ FAISS vectorstore đã sẵn sàng.")
+    print("FAISS vectorstore đã sẵn sàng.")
     return vectorstore

@@ -1,0 +1,19 @@
+{
+  "num_samples": {
+    "v1": 50,
+    "v2": 50
+  },
+  "prompt_v1_scores": {
+    "faithfulness": 0.9802857142857142,
+    "answer_relevancy": 0.8985893747024174,
+    "context_recall": 1.0,
+    "context_precision": 0.9483333332594168
+  },
+  "prompt_v2_scores": {
+    "faithfulness": 0.8619135260164673,
+    "answer_relevancy": 0.8825442691527363,
+    "context_recall": 1.0,
+    "context_precision": 0.9416666665940835
+  },
+  "target_met": true
+}
